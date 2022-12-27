@@ -17,4 +17,16 @@ let chronoData = resources
     return { name, value, chronosphere };
   });
 
-console.table(chronoData);
+// number formatting (adds commas, remove if unwanted)
+const chronoDataFormatted = chronoData.map((resource) => {
+  const { name, value, chronosphere } = resource;
+  const valueReadable = value.toLocaleString(`en-US`);
+  chronoValueReadable = chronosphere.toLocaleString();
+  return {
+    name,
+    value: valueReadable,
+    chronosphere: chronoValueReadable,
+  };
+});
+
+console.table(chronoDataFormatted);
