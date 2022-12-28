@@ -1,3 +1,4 @@
+// NOTE: there is a different formula for crafted/uncrafted materials. This is a rough estimate that needs worked on.
 // To be pasted directly into the developer console while playing the game
 // ----- Get Chronosphere Count
 let buildingsArray = game.bldTab;
